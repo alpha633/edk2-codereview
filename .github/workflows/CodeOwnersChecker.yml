@@ -1,0 +1,42 @@
+## @file
+# Check codeowners files
+#
+# Copyright (c) 2022, Intel Corporation. All rights reserved.<BR>
+# SPDX-License-Identifier: BSD-2-Clause-Patent
+##
+
+name: Check code owners files
+
+# Controls when the action will run. Workflow runs when manually triggered using the UI
+# or API.
+on:
+  workflow_dispatch:
+    # Inputs the workflow accepts.
+    inputs:
+      file:
+        description: 'First git reference for comparison'
+        default: './.github/CODEOWNERS'
+        required: true
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  check_owners:
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        submodules: false
+        
+    - id: codeowner
+      uses: SvanBoxel/codeowners-action@v1
+      with:
+        path: './.github/CODEOWNERS'
+    - run: |
+        echo ${{ steps.codeowners.outputs.codeowners }};        
+
+    - id: codeowner
+      uses: SvanBoxel/codeowners-action@v1
+      with:
+        path: './.github/REVIEWERS'
+    - run: |
+        echo ${{ steps.codeowners.outputs.codeowners }};        
