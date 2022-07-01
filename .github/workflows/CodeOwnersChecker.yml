@@ -33,11 +33,11 @@ jobs:
       with:
         path: './.github/CODEOWNERS'
     - run: |
-        echo ${{ steps.codeowners.outputs.codeowners }};        
+        more ./codeowner-information.json
 
     - id: reviewers
       uses: SvanBoxel/codeowners-action@v1
       with:
         path: './.github/REVIEWERS'
     - run: |
-        echo ${{ steps.codeowners.outputs.codeowners }};        
+        more ./codeowner-information.json
