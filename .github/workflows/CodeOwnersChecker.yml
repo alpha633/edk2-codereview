@@ -22,7 +22,7 @@ jobs:
         ref: AddCodeOwnersAndReviewers
         
     - id: codeowner
-      uses: SvanBoxel/codeowners-action@v1
+      uses: SvanBoxel/codeowners-action@2.1
       with:
         path: './.github/CODEOWNERS'
     - run: |
@@ -31,7 +31,7 @@ jobs:
         echo ${{ steps.codeowners.outputs.codeowners }};
 
     - id: reviewer
-      uses: SvanBoxel/codeowners-action@v1
+      uses: SvanBoxel/codeowners-action@2.1
       with:
         path: './.github/REVIEWERS'
     - run: |
