@@ -21,7 +21,6 @@ jobs:
       with:
         ref: AddCodeOwnersAndReviewers
     - run: |
-        ls -al
         echo ${{ steps }};
         
     - id: codeowner
@@ -29,7 +28,6 @@ jobs:
       with:
         path: './.github/CODEOWNERS'
     - run: |
-        ls -al
         echo ${{ steps }};
 
     - id: reviewer
@@ -37,5 +35,4 @@ jobs:
       with:
         path: './.github/REVIEWERS'
     - run: |
-        ls -al
         echo ${{ steps }};
