@@ -26,15 +26,13 @@ jobs:
       with:
         path: './.github/CODEOWNERS'
     - run: |
-        ls -al
-        ls ./.github -al
-        echo ${{ steps.codeowners.outputs.codeowners }};
+        more ./codeowner-information.json
+        echo ${{ steps }};
 
     - id: reviewer
       uses: SvanBoxel/codeowners-action@2.1
       with:
         path: './.github/REVIEWERS'
     - run: |
-        ls -al
-        ls ./.github -al
-        echo ${{ steps.codeowners.outputs.codeowners }};
+        more ./codeowner-information.json
+        echo ${{ steps }};
