@@ -20,19 +20,21 @@ jobs:
     - uses: actions/checkout@v3
       with:
         ref: AddCodeOwnersAndReviewers
-    - run: |
-        echo ${{ steps }};
         
     - id: codeowner
       uses: SvanBoxel/codeowners-action@v1
       with:
         path: './.github/CODEOWNERS'
     - run: |
-        echo ${{ steps }};
+        ls -al
+        ls ./.github -al
+        echo ${{ steps.codeowners.outputs.codeowners }};
 
     - id: reviewer
       uses: SvanBoxel/codeowners-action@v1
       with:
         path: './.github/REVIEWERS'
     - run: |
-        echo ${{ steps }};
+        ls -al
+        ls ./.github -al
+        echo ${{ steps.codeowners.outputs.codeowners }};
