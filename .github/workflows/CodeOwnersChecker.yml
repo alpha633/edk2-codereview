@@ -9,14 +9,7 @@ name: Check code owners files
 
 # Controls when the action will run. Workflow runs when manually triggered using the UI
 # or API.
-on:
-  workflow_dispatch:
-    # Inputs the workflow accepts.
-    inputs:
-      file:
-        description: 'First git reference for comparison'
-        default: './.github/CODEOWNERS'
-        required: true
+on: workflow_dispatch:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -28,6 +21,7 @@ jobs:
       with:
         ref: AddCodeOwnersAndReviewers
     - run: |
+        ls -al
         echo ${{ steps }};
         
     - id: codeowner
@@ -35,6 +29,7 @@ jobs:
       with:
         path: './.github/CODEOWNERS'
     - run: |
+        ls -al
         echo ${{ steps }};
 
     - id: reviewer
@@ -42,4 +37,5 @@ jobs:
       with:
         path: './.github/REVIEWERS'
     - run: |
+        ls -al
         echo ${{ steps }};
