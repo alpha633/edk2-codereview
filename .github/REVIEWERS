@@ -158,13 +158,13 @@
 # F: ArmVirtPkg/XenPlatformHasAcpiDtDxe/
 # F: ArmVirtPkg/XenioFdtDxe/
 # R: Julien Grall <julien@xen.org>
-/ArmVirtPkg/ArmVirtXen.*                                 julien@xen.org
-/ArmVirtPkg/Library/XenArmGenericTimerVirtCounterLib/**  julien@xen.org
-/ArmVirtPkg/Library/XenVirtMemInfoLib/**                 julien@xen.org
-/ArmVirtPkg/PrePi/**                                     julien@xen.org
-/ArmVirtPkg/XenAcpiPlatformDxe/**                        julien@xen.org
-/ArmVirtPkg/XenPlatformHasAcpiDtDxe/**                   julien@xen.org
-/ArmVirtPkg/XenioFdtDxe/**                               julien@xen.org
+/ArmVirtPkg/ArmVirtXen.*                                 @leiflindholm @samimujawar @kraxel julien@xen.org
+/ArmVirtPkg/Library/XenArmGenericTimerVirtCounterLib/**  @leiflindholm @samimujawar @kraxel julien@xen.org
+/ArmVirtPkg/Library/XenVirtMemInfoLib/**                 @leiflindholm @samimujawar @kraxel julien@xen.org
+/ArmVirtPkg/PrePi/**                                     @leiflindholm @samimujawar @kraxel julien@xen.org
+/ArmVirtPkg/XenAcpiPlatformDxe/**                        @leiflindholm @samimujawar @kraxel julien@xen.org
+/ArmVirtPkg/XenPlatformHasAcpiDtDxe/**                   @leiflindholm @samimujawar @kraxel julien@xen.org
+/ArmVirtPkg/XenioFdtDxe/**                               @leiflindholm @samimujawar @kraxel julien@xen.org
 
 # BaseTools
 # F: BaseTools/
@@ -172,7 +172,8 @@
 # M: Bob Feng <bob.c.feng@intel.com> [BobCF]
 # M: Liming Gao <gaoliming@byosoft.com.cn> [lgao4]
 # R: Yuwei Chen <yuwei.chen@intel.com> [YuweiChen1110]
-/BaseTools/**  @YuweiChen1110
+/BaseTools/**             @YuweiChen1110
+/BaseTools/**/RiscV64/**  @YuweiChen1110 @JohnAZoidberg
 
 # CryptoPkg
 # F: CryptoPkg/
@@ -450,7 +451,7 @@
 /MdeModulePkg/**/*FileExplorer*/**                    @dandanbi  @ydong10
 /MdeModulePkg/**/*Hii*/**                             @dandanbi  @ydong10
 /MdeModulePkg/**/*Ui*/**                              @dandanbi  @ydong10
-/MdeModulePkg/Application/BootManagerMenuApp/**       @dandanbi  @ydong10
+/MdeModulePkg/Application/BootManagerMenuApp/**       @ZhichaoGao @niruiyu @dandanbi  @ydong10
 /MdeModulePkg/Include/*/*FileExplorer*.h              @dandanbi  @ydong10
 /MdeModulePkg/Include/*/*FormBrowser*.h               @dandanbi  @ydong10
 /MdeModulePkg/Include/*/*Hii*.h                       @dandanbi  @ydong10
@@ -534,7 +535,8 @@
 # M: Michael D Kinney <michael.d.kinney@intel.com> [mdkinney]
 # M: Liming Gao <gaoliming@byosoft.com.cn> [lgao4]
 # R: Zhiguang Liu <zhiguang.liu@intel.com> [LiuZhiguang001]
-/MdePkg/**  @LiuZhiguang001
+/MdePkg/**             @LiuZhiguang001
+/MdePkg/**/RiscV64/**  @LiuZhiguang001 @JohnAZoidberg
 
 # NetworkPkg
 # F: NetworkPkg/
@@ -567,36 +569,36 @@
 # F: OvmfPkg/Library/ResetSystemLib/BaseResetSystemLibBhyve.inf
 # R: Rebecca Cran <rebecca@bsdio.com> [bcran]
 # R: Peter Grehan <grehan@freebsd.org> [grehan-freebsd]
-/OvmfPkg/Bhyve/**                                            @bcran @grehan-freebsd
-/OvmfPkg/Include/IndustryStandard/Bhyve.h                    @bcran @grehan-freebsd
-/OvmfPkg/Include/Library/BhyveFwCtlLib.h                     @bcran @grehan-freebsd
-/OvmfPkg/Library/AcpiTimerLib/BaseAcpiTimerLibBhyve.c        @bcran @grehan-freebsd
-/OvmfPkg/Library/AcpiTimerLib/BaseAcpiTimerLibBhyve.inf      @bcran @grehan-freebsd
-/OvmfPkg/Library/BhyveFwCtlLib/**                            @bcran @grehan-freebsd
-/OvmfPkg/Library/PlatformBootManagerLibBhyve/**              @bcran @grehan-freebsd
-/OvmfPkg/Library/ResetSystemLib/BaseResetShutdownBhyve.c     @bcran @grehan-freebsd
-/OvmfPkg/Library/ResetSystemLib/BaseResetSystemLibBhyve.inf  @bcran @grehan-freebsd
+/OvmfPkg/Bhyve/**                                            @jljusten @kraxel @bcran @grehan-freebsd
+/OvmfPkg/Include/IndustryStandard/Bhyve.h                    @jljusten @kraxel @bcran @grehan-freebsd
+/OvmfPkg/Include/Library/BhyveFwCtlLib.h                     @jljusten @kraxel @bcran @grehan-freebsd
+/OvmfPkg/Library/AcpiTimerLib/BaseAcpiTimerLibBhyve.c        @jljusten @kraxel @bcran @grehan-freebsd
+/OvmfPkg/Library/AcpiTimerLib/BaseAcpiTimerLibBhyve.inf      @jljusten @kraxel @bcran @grehan-freebsd
+/OvmfPkg/Library/BhyveFwCtlLib/**                            @jljusten @kraxel @bcran @grehan-freebsd
+/OvmfPkg/Library/PlatformBootManagerLibBhyve/**              @jljusten @kraxel @bcran @grehan-freebsd
+/OvmfPkg/Library/ResetSystemLib/BaseResetShutdownBhyve.c     @jljusten @kraxel @bcran @grehan-freebsd
+/OvmfPkg/Library/ResetSystemLib/BaseResetSystemLibBhyve.inf  @jljusten @kraxel @bcran @grehan-freebsd
 
 # OvmfPkg: cloudhv-related modules
 # F: OvmfPkg/CloudHv/
 # F: OvmfPkg/Include/IndustryStandard/CloudHv.h
 # R: Sebastien Boeuf <sebastien.boeuf@intel.com> [sboeuf]
-/OvmfPkg/CloudHv/**                          @sboeuf
-/OvmfPkg/Include/IndustryStandard/CloudHv.h  @sboeuf
+/OvmfPkg/CloudHv/**                          @jljusten @kraxel @sboeuf
+/OvmfPkg/Include/IndustryStandard/CloudHv.h  @jljusten @kraxel @sboeuf
 
 # OvmfPkg: microvm-related modules
 # F: OvmfPkg/Microvm/
 # F: OvmfPkg/Include/IndustryStandard/Microvm.h
 # F: OvmfPkg/Library/ResetSystemLib/*Microvm.*
 # R: Gerd Hoffmann <kraxel@redhat.com> [kraxel]
-/OvmfPkg/Microvm/**                          @kraxel
-/OvmfPkg/Include/IndustryStandard/Microvm.h  @kraxel
-/OvmfPkg/Library/ResetSystemLib/*Microvm.*   @kraxel
+/OvmfPkg/Microvm/**                          @jljusten @kraxel @kraxel
+/OvmfPkg/Include/IndustryStandard/Microvm.h  @jljusten @kraxel @kraxel
+/OvmfPkg/Library/ResetSystemLib/*Microvm.*   @jljusten @kraxel @kraxel
 
 # OvmfPkg: CSM modules
 # F: OvmfPkg/Csm/
 # R: David Woodhouse <dwmw2@infradead.org> [dwmw2]
-/OvmfPkg/Csm/**  @dwmw2
+/OvmfPkg/Csm/**  @jljusten @kraxel @dwmw2
 
 # OvmfPkg: Confidential Computing
 # F: OvmfPkg/AmdSev/
@@ -616,37 +618,37 @@
 # R: Jiewen Yao <jiewen.yao@intel.com> [jyao1]
 # R: Min Xu <min.m.xu@intel.com> [mxu9]
 # R: Tom Lendacky <thomas.lendacky@amd.com> [tlendacky]
-/OvmfPkg/AmdSev/**                                   @codomania erdemaktas@google.com @jejb @jyao1 @mxu9 @tlendacky
-/OvmfPkg/AmdSevDxe/**
-/OvmfPkg/Include/Guid/ConfidentialComputingSecret.h
-/OvmfPkg/Include/Library/MemEncryptSevLib.h
-/OvmfPkg/IoMmuDxe/AmdSevIoMmu.*
-/OvmfPkg/Library/BaseMemEncryptSevLib/**
-/OvmfPkg/Library/PlatformBootManagerLibGrub/**
-/OvmfPkg/Library/VmgExitLib/**
-/OvmfPkg/PlatformPei/AmdSev.c
-/OvmfPkg/ResetVector/**
-/OvmfPkg/Sec/**
+/OvmfPkg/AmdSev/**                                   @jljusten @kraxel @codomania erdemaktas@google.com @jejb @jyao1 @mxu9 @tlendacky
+/OvmfPkg/AmdSevDxe/**                                @jljusten @kraxel @codomania erdemaktas@google.com @jejb @jyao1 @mxu9 @tlendacky
+/OvmfPkg/Include/Guid/ConfidentialComputingSecret.h  @jljusten @kraxel @codomania erdemaktas@google.com @jejb @jyao1 @mxu9 @tlendacky
+/OvmfPkg/Include/Library/MemEncryptSevLib.h          @jljusten @kraxel @codomania erdemaktas@google.com @jejb @jyao1 @mxu9 @tlendacky
+/OvmfPkg/IoMmuDxe/AmdSevIoMmu.*                      @jljusten @kraxel @codomania erdemaktas@google.com @jejb @jyao1 @mxu9 @tlendacky
+/OvmfPkg/Library/BaseMemEncryptSevLib/**             @jljusten @kraxel @codomania erdemaktas@google.com @jejb @jyao1 @mxu9 @tlendacky
+/OvmfPkg/Library/PlatformBootManagerLibGrub/**       @jljusten @kraxel @codomania erdemaktas@google.com @jejb @jyao1 @mxu9 @tlendacky
+/OvmfPkg/Library/VmgExitLib/**                       @jljusten @kraxel @codomania erdemaktas@google.com @jejb @jyao1 @mxu9 @tlendacky
+/OvmfPkg/PlatformPei/AmdSev.c                        @jljusten @kraxel @codomania erdemaktas@google.com @jejb @jyao1 @mxu9 @tlendacky
+/OvmfPkg/ResetVector/**                              @jljusten @kraxel @codomania erdemaktas@google.com @jejb @jyao1 @mxu9 @tlendacky
+/OvmfPkg/Sec/**                                      @jljusten @kraxel @codomania erdemaktas@google.com @jejb @jyao1 @mxu9 @tlendacky
 
 # OvmfPkg: FDT related modules
 # F: OvmfPkg/Fdt
 # R: Leif Lindholm <quic_llindhol@quicinc.com> [leiflindholm]
 # R: Gerd Hoffmann <kraxel@redhat.com> [kraxel]
 # R: Abner Chang <abner.chang@hpe.com> [changab]
-/OvmfPkg/Fdt/**  @leiflindholm @kraxel @changab
+/OvmfPkg/Fdt/**  @jljusten @kraxel @leiflindholm @kraxel @changab
 
 # OvmfPkg: LsiScsi driver
 # F: OvmfPkg/LsiScsiDxe/
 # R: Gary Lin <glin@suse.com>
-/OvmfPkg/LsiScsiDxe/**   glin@suse.com
+/OvmfPkg/LsiScsiDxe/**   @jljusten @kraxel glin@suse.com
 
 # OvmfPkg: MptScsi and PVSCSI driver
 # F: OvmfPkg/MptScsiDxe/
 # F: OvmfPkg/PvScsiDxe/
 # R: Liran Alon <liran.alon@oracle.com>
 # R: Nikita Leshenko <nikita.leshchenko@oracle.com>
-/OvmfPkg/MptScsiDxe/**  liran.alon@oracle.com nikita.leshchenko@oracle.com
-/OvmfPkg/PvScsiDxe/**   liran.alon@oracle.com nikita.leshchenko@oracle.com
+/OvmfPkg/MptScsiDxe/**  @jljusten @kraxel liran.alon@oracle.com nikita.leshchenko@oracle.com
+/OvmfPkg/PvScsiDxe/**   @jljusten @kraxel liran.alon@oracle.com nikita.leshchenko@oracle.com
 
 # OvmfPkg: TCG- and TPM2-related modules
 # F: OvmfPkg/Include/IndustryStandard/QemuTpm.h
@@ -656,10 +658,10 @@
 # F: OvmfPkg/Tcg/
 # R: Marc-André Lureau <marcandre.lureau@redhat.com>
 # R: Stefan Berger <stefanb@linux.ibm.com>
-/OvmfPkg/Include/IndustryStandard/QemuTpm.h            marcandre.lureau@redhat.com stefanb@linux.ibm.com
-/OvmfPkg/Library/Tcg2PhysicalPresenceLib*/**           marcandre.lureau@redhat.com stefanb@linux.ibm.com
-/OvmfPkg/PlatformPei/ClearCache.c                      marcandre.lureau@redhat.com stefanb@linux.ibm.com
-/OvmfPkg/Tcg/**                                        marcandre.lureau@redhat.com stefanb@linux.ibm.com
+/OvmfPkg/Include/IndustryStandard/QemuTpm.h            @jljusten @kraxel marcandre.lureau@redhat.com stefanb@linux.ibm.com
+/OvmfPkg/Library/Tcg2PhysicalPresenceLib*/**           @jljusten @kraxel marcandre.lureau@redhat.com stefanb@linux.ibm.com
+/OvmfPkg/PlatformPei/ClearCache.c                      @jljusten @kraxel marcandre.lureau@redhat.com stefanb@linux.ibm.com
+/OvmfPkg/Tcg/**                                        @jljusten @kraxel marcandre.lureau@redhat.com stefanb@linux.ibm.com
 
 # OvmfPkg: Xen-related modules
 # F: OvmfPkg/Include/Guid/XenBusRootDevice.h
@@ -690,39 +692,39 @@
 # F: OvmfPkg/XenTimerDxe/
 # R: Anthony Perard <anthony.perard@citrix.com> [sheep]
 # R: Julien Grall <julien@xen.org>
-/OvmfPkg/Include/Guid/XenBusRootDevice.h               @sheep julien@xen.org
-/OvmfPkg/Include/Guid/XenInfo.h                        @sheep julien@xen.org
-/OvmfPkg/Include/IndustryStandard/Xen/**               @sheep julien@xen.org
-/OvmfPkg/Include/Library/XenHypercallLib.h             @sheep julien@xen.org
-/OvmfPkg/Include/Library/XenIoMmioLib.h                @sheep julien@xen.org
-/OvmfPkg/Include/Library/XenPlatformLib.h              @sheep julien@xen.org
-/OvmfPkg/Include/Protocol/XenBus.h                     @sheep julien@xen.org
-/OvmfPkg/Include/Protocol/XenIo.h                      @sheep julien@xen.org
-/OvmfPkg/Library/XenConsoleSerialPortLib/**            @sheep julien@xen.org
-/OvmfPkg/Library/XenHypercallLib/**                    @sheep julien@xen.org
-/OvmfPkg/Library/XenIoMmioLib/**                       @sheep julien@xen.org
-/OvmfPkg/Library/XenPlatformLib/**                     @sheep julien@xen.org
-/OvmfPkg/Library/XenRealTimeClockLib/**                @sheep julien@xen.org
-/OvmfPkg/OvmfXen.*                                     @sheep julien@xen.org
-/OvmfPkg/OvmfXenElfHeaderGenerator.c                   @sheep julien@xen.org
-/OvmfPkg/SmbiosPlatformDxe/*Xen*                       @sheep julien@xen.org
-/OvmfPkg/XenAcpiPlatformDxe/**                         @sheep julien@xen.org
-/OvmfPkg/XenBusDxe/**                                  @sheep julien@xen.org
-/OvmfPkg/XenIoPciDxe/**                                @sheep julien@xen.org
-/OvmfPkg/XenIoPvhDxe/**                                @sheep julien@xen.org
-/OvmfPkg/XenPlatformPei/**                             @sheep julien@xen.org
-/OvmfPkg/XenPvBlkDxe/**                                @sheep julien@xen.org
-/OvmfPkg/XenResetVector/**                             @sheep julien@xen.org
+/OvmfPkg/Include/Guid/XenBusRootDevice.h               @jljusten @kraxel @sheep julien@xen.org
+/OvmfPkg/Include/Guid/XenInfo.h                        @jljusten @kraxel @sheep julien@xen.org
+/OvmfPkg/Include/IndustryStandard/Xen/**               @jljusten @kraxel @sheep julien@xen.org
+/OvmfPkg/Include/Library/XenHypercallLib.h             @jljusten @kraxel @sheep julien@xen.org
+/OvmfPkg/Include/Library/XenIoMmioLib.h                @jljusten @kraxel @sheep julien@xen.org
+/OvmfPkg/Include/Library/XenPlatformLib.h              @jljusten @kraxel @sheep julien@xen.org
+/OvmfPkg/Include/Protocol/XenBus.h                     @jljusten @kraxel @sheep julien@xen.org
+/OvmfPkg/Include/Protocol/XenIo.h                      @jljusten @kraxel @sheep julien@xen.org
+/OvmfPkg/Library/XenConsoleSerialPortLib/**            @jljusten @kraxel @sheep julien@xen.org
+/OvmfPkg/Library/XenHypercallLib/**                    @jljusten @kraxel @sheep julien@xen.org
+/OvmfPkg/Library/XenIoMmioLib/**                       @jljusten @kraxel @sheep julien@xen.org
+/OvmfPkg/Library/XenPlatformLib/**                     @jljusten @kraxel @sheep julien@xen.org
+/OvmfPkg/Library/XenRealTimeClockLib/**                @jljusten @kraxel @sheep julien@xen.org
+/OvmfPkg/OvmfXen.*                                     @jljusten @kraxel @sheep julien@xen.org
+/OvmfPkg/OvmfXenElfHeaderGenerator.c                   @jljusten @kraxel @sheep julien@xen.org
+/OvmfPkg/SmbiosPlatformDxe/*Xen*                       @jljusten @kraxel @sheep julien@xen.org
+/OvmfPkg/XenAcpiPlatformDxe/**                         @jljusten @kraxel @sheep julien@xen.org
+/OvmfPkg/XenBusDxe/**                                  @jljusten @kraxel @sheep julien@xen.org
+/OvmfPkg/XenIoPciDxe/**                                @jljusten @kraxel @sheep julien@xen.org
+/OvmfPkg/XenIoPvhDxe/**                                @jljusten @kraxel @sheep julien@xen.org
+/OvmfPkg/XenPlatformPei/**                             @jljusten @kraxel @sheep julien@xen.org
+/OvmfPkg/XenPvBlkDxe/**                                @jljusten @kraxel @sheep julien@xen.org
+/OvmfPkg/XenResetVector/**                             @jljusten @kraxel @sheep julien@xen.org
 #
 # ATTENTION: The following component does not exist anymore
 #
-#/OvmfPkg/XenTimerDxe/**                                @sheep julien@xen.org
+#/OvmfPkg/XenTimerDxe/**                                @jljusten @kraxel @sheep julien@xen.org
 
 # Files common to Bhyve and Xen
-/OvmfPkg/Library/PciHostBridgeLibScan/**               @bcran @grehan-freebsd @sheep julien@xen.org
+/OvmfPkg/Library/PciHostBridgeLibScan/**               @jljusten @kraxel @bcran @grehan-freebsd @sheep julien@xen.org
 
 # Files common to TCG and XEN
-/OvmfPkg/Library/PlatformBootManagerLib/BdsPlatform.c  marcandre.lureau@redhat.com stefanb@linux.ibm.com @sheep julien@xen.org
+/OvmfPkg/Library/PlatformBootManagerLib/BdsPlatform.c  @jljusten @kraxel marcandre.lureau@redhat.com stefanb@linux.ibm.com @sheep julien@xen.org
 
 # PcAtChipsetPkg
 # F: PcAtChipsetPkg/
@@ -838,4 +840,5 @@
 # F: */RiscV64/
 # M: Abner Chang <abner.chang@hpe.com> [changab]
 # R: Daniel Schaefer <daniel.schaefer@hpe.com> [JohnAZoidberg]
-**/RiscV64/**  @JohnAZoidberg
+
+#**/RiscV64/**  @JohnAZoidberg

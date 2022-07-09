@@ -149,7 +149,9 @@
 # R: Leif Lindholm <quic_llindhol@quicinc.com> [leiflindholm]
 # R: Sami Mujawar <sami.mujawar@arm.com> [samimujawar]
 # R: Gerd Hoffmann <kraxel@redhat.com> [kraxel]
-/ArmVirtPkg/**  @ardbiesheuvel
+/ArmVirtPkg/**             @ardbiesheuvel
+/ArmVirtPkg/**/AArch64/**  @ardbiesheuvel @leiflindholm
+/ArmVirtPkg/**/Arm/**      @ardbiesheuvel @leiflindholm
 
 # ArmVirtPkg: modules used on Xen
 # F: ArmVirtPkg/ArmVirtXen.*
@@ -460,6 +462,7 @@
 # S: Maintained
 /OvmfPkg/**             @ardbiesheuvel @jyao1
 /OvmfPkg/**/AArch64/**  @ardbiesheuvel @jyao1 @leiflindholm
+/OvmfPkg/**/Aarch64/**  @ardbiesheuvel @jyao1 @leiflindholm   # workaround.  See BZ 3982
 /OvmfPkg/**/Arm/**      @ardbiesheuvel @jyao1 @leiflindholm
 /OvmfPkg/**/RiscV64/**  @ardbiesheuvel @jyao1 @changab
 

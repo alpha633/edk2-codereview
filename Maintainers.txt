@@ -100,7 +100,7 @@ M: Ard Biesheuvel <ardb+tianocore@kernel.org> [ardbiesheuvel]
 RISCV64
 F: */RiscV64/
 M: Abner Chang <abner.chang@hpe.com> [changab]
-R: Daniel Schaefer <daniel.schaefer@hpe.com>
+R: Daniel Schaefer <daniel.schaefer@hpe.com> [JohnAZoidberg]
 
 EDK II Continuous Integration:
 ------------------------------
