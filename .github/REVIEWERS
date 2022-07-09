@@ -210,7 +210,7 @@
 # M: Ard Biesheuvel <ardb+tianocore@kernel.org> [ardbiesheuvel]
 # M: Abner Chang <abner.chang@hpe.com> [changab]
 # R: Daniel Schaefer <daniel.schaefer@hpe.com> [JohnAZoidberg]
-/EmbeddedPkg/**  @leiflindholm @ardbiesheuvel @JohnAZoidberg
+/EmbeddedPkg/**  @JohnAZoidberg
 
 # EmulatorPkg
 # F: EmulatorPkg/
@@ -817,8 +817,8 @@
 # R: Debkumar De <debkumar.de@intel.com>
 # R: Harry Han <harry.han@intel.com>
 # R: Catharine West <catharine.west@intel.com> [catharine-intl]
-/UefiCpuPkg/SecCore/**      debkumar.de@intel.com harry.han@intel.com @catharine-intl
-/UefiCpuPkg/ResetVector/**  debkumar.de@intel.com harry.han@intel.com @catharine-intl
+/UefiCpuPkg/SecCore/**      @rahul1-kumar debkumar.de@intel.com harry.han@intel.com @catharine-intl
+/UefiCpuPkg/ResetVector/**  @rahul1-kumar debkumar.de@intel.com harry.han@intel.com @catharine-intl
 
 # UefiPayloadPkg
 # F: UefiPayloadPkg/
@@ -829,7 +829,7 @@
 # R: Benjamin You <benjamin.you@intel.com> [BenjaminYou]
 # R: Sean Rhodes <sean@starlabs.systems>
 # S: Maintained
-/UefiPayloadPkg/**  @mauricema @BenjaminYou <sean@starlabs.systems>
+/UefiPayloadPkg/**  @mauricema @BenjaminYou sean@starlabs.systems
 
 # UnitTestFrameworkPkg
 # F: UnitTestFrameworkPkg/
