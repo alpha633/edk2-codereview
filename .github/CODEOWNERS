@@ -462,7 +462,8 @@
 # S: Maintained
 /OvmfPkg/**             @ardbiesheuvel @jyao1
 /OvmfPkg/**/AArch64/**  @ardbiesheuvel @jyao1 @leiflindholm
-/OvmfPkg/**/Aarch64/**  @ardbiesheuvel @jyao1 @leiflindholm   # workaround.  See BZ 3982
+# Workaround.  See BZ 3982
+/OvmfPkg/**/Aarch64/**  @ardbiesheuvel @jyao1 @leiflindholm
 /OvmfPkg/**/Arm/**      @ardbiesheuvel @jyao1 @leiflindholm
 /OvmfPkg/**/RiscV64/**  @ardbiesheuvel @jyao1 @changab
 

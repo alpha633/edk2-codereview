@@ -591,9 +591,9 @@
 # F: OvmfPkg/Include/IndustryStandard/Microvm.h
 # F: OvmfPkg/Library/ResetSystemLib/*Microvm.*
 # R: Gerd Hoffmann <kraxel@redhat.com> [kraxel]
-/OvmfPkg/Microvm/**                          @jljusten @kraxel @kraxel
-/OvmfPkg/Include/IndustryStandard/Microvm.h  @jljusten @kraxel @kraxel
-/OvmfPkg/Library/ResetSystemLib/*Microvm.*   @jljusten @kraxel @kraxel
+/OvmfPkg/Microvm/**                          @jljusten @kraxel
+/OvmfPkg/Include/IndustryStandard/Microvm.h  @jljusten @kraxel
+/OvmfPkg/Library/ResetSystemLib/*Microvm.*   @jljusten @kraxel
 
 # OvmfPkg: CSM modules
 # F: OvmfPkg/Csm/
@@ -635,7 +635,7 @@
 # R: Leif Lindholm <quic_llindhol@quicinc.com> [leiflindholm]
 # R: Gerd Hoffmann <kraxel@redhat.com> [kraxel]
 # R: Abner Chang <abner.chang@hpe.com> [changab]
-/OvmfPkg/Fdt/**  @jljusten @kraxel @leiflindholm @kraxel @changab
+/OvmfPkg/Fdt/**  @jljusten @kraxel @leiflindholm @changab
 
 # OvmfPkg: LsiScsi driver
 # F: OvmfPkg/LsiScsiDxe/
