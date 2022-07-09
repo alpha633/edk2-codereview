@@ -167,7 +167,10 @@
 # M: Bob Feng <bob.c.feng@intel.com> [BobCF]
 # M: Liming Gao <gaoliming@byosoft.com.cn> [lgao4]
 # R: Yuwei Chen <yuwei.chen@intel.com> [YuweiChen1110]
-/BaseTools/**  @BobCF @lgao4
+/BaseTools/**             @BobCF @lgao4
+/BaseTools/**/AArch64/**  @BobCF @lgao4 @leiflindholm @ardbiesheuvel
+/BaseTools/**/Arm/**      @BobCF @lgao4 @leiflindholm @ardbiesheuvel
+/BaseTools/**/RiscV64/**  @BobCF @lgao4 @changab
 
 # CryptoPkg
 # F: CryptoPkg/
@@ -183,7 +186,9 @@
 # W: https://github.com/tianocore/tianocore.github.io/wiki/DynamicTablesPkg
 # M: Sami Mujawar <Sami.Mujawar@arm.com> [samimujawar]
 # M: Alexei Fedorov <Alexei.Fedorov@arm.com> [AlexeiFedorov]
-/DynamicTablesPkg/**  @samimujawar @AlexeiFedorov
+/DynamicTablesPkg/**             @samimujawar @AlexeiFedorov
+/DynamicTablesPkg/**/AArch64/**  @samimujawar @AlexeiFedorov @leiflindholm @ardbiesheuvel
+/DynamicTablesPkg/**/Arm/**      @samimujawar @AlexeiFedorov @leiflindholm @ardbiesheuvel
 
 # EmbeddedPkg
 # F: EmbeddedPkg/
@@ -206,7 +211,7 @@
 # F: EmulatorPkg/*Redfish*
 # M: Abner Chang <abner.chang@hpe.com> [changab]
 # R: Nickle Wang <nickle.wang@hpe.com> [nicklela]
-/EmulatorPkg/**/Redfish*/**  @changab
+/EmulatorPkg/**/Redfish*/**  @ajfish @niruiyu @changab
 
 # FatPkg
 # F: FatPkg/
@@ -246,7 +251,10 @@
 # W: https://github.com/tianocore/tianocore.github.io/wiki/MdeModulePkg
 # M: Jian J Wang <jian.j.wang@intel.com> [jwang36]
 # M: Liming Gao <gaoliming@byosoft.com.cn> [lgao4]
-/MdeModulePkg/**  @jwang36 @lgao4
+/MdeModulePkg/**             @jwang36 @lgao4
+/MdeModulePkg/**/AArch64/**  @jwang36 @lgao4 @leiflindholm @ardbiesheuvel
+/MdeModulePkg/**/Arm/**      @jwang36 @lgao4 @leiflindholm @ardbiesheuvel
+/MdeModulePkg/**/RiscV64/**  @jwang36 @lgao4 @changab
 
 # MdeModulePkg: ACPI modules
 # F: MdeModulePkg/Include/*Acpi*.h
@@ -429,7 +437,10 @@
 # M: Michael D Kinney <michael.d.kinney@intel.com> [mdkinney]
 # M: Liming Gao <gaoliming@byosoft.com.cn> [lgao4]
 # R: Zhiguang Liu <zhiguang.liu@intel.com> [LiuZhiguang001]
-/MdePkg/**  @mdkinney @lgao4
+/MdePkg/**             @mdkinney @lgao4
+/MdePkg/**/AArch64/**  @mdkinney @lgao4 @leiflindholm @ardbiesheuvel
+/MdePkg/**/Arm/**      @mdkinney @lgao4 @leiflindholm @ardbiesheuvel
+/MdePkg/**/RiscV64/**  @mdkinney @lgao4 @changab
 
 # NetworkPkg
 # F: NetworkPkg/
@@ -447,7 +458,10 @@
 # R: Jordan Justen <jordan.l.justen@intel.com> [jljusten]
 # R: Gerd Hoffmann <kraxel@redhat.com> [kraxel]
 # S: Maintained
-/OvmfPkg/**  @ardbiesheuvel @jyao1
+/OvmfPkg/**             @ardbiesheuvel @jyao1
+/OvmfPkg/**/AArch64/**  @ardbiesheuvel @jyao1 @leiflindholm
+/OvmfPkg/**/Arm/**      @ardbiesheuvel @jyao1 @leiflindholm
+/OvmfPkg/**/RiscV64/**  @ardbiesheuvel @jyao1 @changab
 
 #
 # OvmfPkg: bhyve-related modules
@@ -580,7 +594,10 @@
 # W: https://github.com/tianocore/tianocore.github.io/wiki/SecurityPkg
 # M: Jiewen Yao <jiewen.yao@intel.com> [jyao1]
 # M: Jian J Wang <jian.j.wang@intel.com> [jwang36]
-/SecurityPkg/**  @jyao1 @jwang36
+/SecurityPkg/**             @jyao1 @jwang36
+/SecurityPkg/**/AArch64/**  @jyao1 @jwang36 @leiflindholm @ardbiesheuvel
+/SecurityPkg/**/Arm/**      @jyao1 @jwang36 @leiflindholm @ardbiesheuvel
+/SecurityPkg/**/RiscV64/**  @jyao1 @jwang36 @changab
 
 # SecurityPkg: Secure boot related modules
 # F: SecurityPkg/Library/DxeImageVerificationLib/
@@ -598,7 +615,10 @@
 # W: https://github.com/tianocore/tianocore.github.io/wiki/ShellPkg
 # M: Ray Ni <ray.ni@intel.com> [niruiyu]
 # M: Zhichao Gao <zhichao.gao@intel.com> [ZhichaoGao]
-/ShellPkg/**  @niruiyu @ZhichaoGao
+/ShellPkg/**             @niruiyu @ZhichaoGao
+/ShellPkg/**/AArch64/**  @niruiyu @ZhichaoGao @leiflindholm @ardbiesheuvel
+/ShellPkg/**/Arm/**      @niruiyu @ZhichaoGao @leiflindholm @ardbiesheuvel
+/ShellPkg/**/RiscV64/**  @niruiyu @ZhichaoGao @changab
 
 # SignedCapsulePkg
 # F: SignedCapsulePkg/
@@ -618,7 +638,10 @@
 # M: Sami Mujawar <sami.mujawar@arm.com> [samimujawar]
 # M: Jiewen Yao <jiewen.yao@intel.com> [jyao1]
 # R: Supreeth Venkatesh <supreeth.venkatesh@arm.com> [supven01]
-/StandaloneMmPkg/**  @ardbiesheuvel @samimujawar @jyao1
+/StandaloneMmPkg/**             @ardbiesheuvel @samimujawar @jyao1
+/StandaloneMmPkg/**/AArch64/**  @ardbiesheuvel @samimujawar @jyao1 @leiflindholm
+/StandaloneMmPkg/**/Arm/**      @ardbiesheuvel @samimujawar @jyao1 @leiflindholm
+/StandaloneMmPkg/**/RiscV64/**  @ardbiesheuvel @samimujawar @jyao1 @changab
 
 # UefiCpuPkg
 # F: UefiCpuPkg/
@@ -662,11 +685,13 @@
 # F: */Arm/
 # M: Leif Lindholm <quic_llindhol@quicinc.com> [leiflindholm]
 # M: Ard Biesheuvel <ardb+tianocore@kernel.org> [ardbiesheuvel]
-**/AArch64/**  @leiflindholm @ardbiesheuvel
-**/Arm/**      @leiflindholm @ardbiesheuvel
+
+#**/AArch64/**  @leiflindholm @ardbiesheuvel
+#**/Arm/**      @leiflindholm @ardbiesheuvel
 
 # RISCV64
 # F: */RiscV64/
 # M: Abner Chang <abner.chang@hpe.com> [changab]
 # R: Daniel Schaefer <daniel.schaefer@hpe.com> [JohnAZoidberg]
-**/RiscV64/**  @changab
+
+#**/RiscV64/**  @changab
