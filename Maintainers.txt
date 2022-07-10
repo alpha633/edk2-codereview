@@ -89,11 +89,10 @@ M: Zhichao Gao <zhichao.gao@intel.com> [ZhichaoGao]           (Ia32/X64)
 M: Leif Lindholm <quic_llindhol@quicinc.com> [leiflindholm]           (ARM/AArch64)
 M: Ard Biesheuvel <ardb+tianocore@kernel.org> [ardbiesheuvel] (ARM/AArch64)
 
-EDK II Architectures:
+EDK II Architectures(Includes workaround.  See BZ 3982)
 ---------------------
 ARM, AARCH64
 F: */AArch64/
-# Workaround.  See BZ 3982
 F: */Aarch64/
 F: */Arm/
 M: Leif Lindholm <quic_llindhol@quicinc.com> [leiflindholm]
