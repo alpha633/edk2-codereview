@@ -21,20 +21,5 @@ jobs:
       with:
         ref: AddCodeOwnersAndReviewers
         
-    - id: codeowner
-      uses: SvanBoxel/codeowners-action@2.1
-      with:
-        path: './.github/CODEOWNERS'
-        file_match_info: true
     - run: |
-        more ./codeowner-information.json
-        echo ${{ steps }};
-
-    - id: reviewer
-      uses: SvanBoxel/codeowners-action@2.1
-      with:
-        path: './.github/REVIEWERS'
-        file_match_info: true
-    - run: |
-        more ./codeowner-information.json
-        echo ${{ steps }};
+        .github/workflows/CompareMaintainersReviewers.py
