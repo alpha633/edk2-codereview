@@ -22,4 +22,5 @@ jobs:
         ref: AddCodeOwnersAndReviewers
         
     - run: |
-        .github/workflows/CompareMaintainersReviewers.py
+        pip install codeowners
+        py .github/workflows/CompareMaintainersReviewers.py
