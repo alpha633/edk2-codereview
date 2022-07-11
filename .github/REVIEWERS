@@ -305,7 +305,7 @@
 # F: MdeModulePkg/Universal/Console/
 # R: Zhichao Gao <zhichao.gao@intel.com> [ZhichaoGao]
 # R: Ray Ni <ray.ni@intel.com> [niruiyu]
-/MdeModulePkg/*Logo*/**                            @ZhichaoGao @niruiyu
+/MdeModulePkg/**/*Logo*/**                         @ZhichaoGao @niruiyu
 /MdeModulePkg/Include/*/*Logo*.h                   @ZhichaoGao @niruiyu
 /MdeModulePkg/Include/Guid/ConnectConInEvent.h     @ZhichaoGao @niruiyu
 /MdeModulePkg/Include/Guid/Console*.h              @ZhichaoGao @niruiyu
@@ -349,6 +349,7 @@
 /MdeModulePkg/Application/DumpDynPcd/**                    @dandanbi  @lgao4
 /MdeModulePkg/Core/Dxe/**                                  @dandanbi  @lgao4
 /MdeModulePkg/Core/DxeIplPeim/**                           @dandanbi  @lgao4
+/MdeModulePkg/Core/DxeIplPeim/**/RiscV64/**                @dandanbi  @lgao4 @JohnAZoidberg
 /MdeModulePkg/Core/RuntimeDxe/**                           @dandanbi  @lgao4
 /MdeModulePkg/Include/*/*Mem*.h                            @dandanbi  @lgao4
 /MdeModulePkg/Include/*/*Pcd*.h                            @dandanbi  @lgao4
@@ -396,7 +397,7 @@
 /MdeModulePkg/Include/*/*Ufs*.h                                @hwu25  @niruiyu
 /MdeModulePkg/Include/*/*Usb*.h                                @hwu25  @niruiyu
 /MdeModulePkg/Include/Guid/RecoveryDevice.h                    @hwu25  @niruiyu
-/MdeModulePkg/Include/Guid/S3StorageDeviceInitList.h           @hwu25  @niruiyu
+/MdeModulePkg/Include/Guid/S3StorageDeviceInitList.h           @hwu25  @niruiyu @ydong10
 /MdeModulePkg/Include/Library/PciHostBridgeLib.h               @hwu25  @niruiyu
 /MdeModulePkg/Include/Ppi/StorageSecurityCommand.h             @hwu25  @niruiyu
 /MdeModulePkg/Include/Protocol/Ps2Policy.h                     @hwu25  @niruiyu
@@ -474,15 +475,6 @@
 /MdeModulePkg/Include/*/*Smi*.h  @ydong10  @niruiyu
 /MdeModulePkg/Include/*/*Smm*.h  @ydong10  @niruiyu
 
-# MdeModulePkg: Pei Core
-# F: MdeModulePkg/Core/Pei/
-# R: Dandan Bi <dandan.bi@intel.com> [dandanbi]
-# R: Liming Gao <gaoliming@byosoft.com.cn> [lgao4]
-# R: Debkumar De <debkumar.de@intel.com>
-# R: Harry Han <harry.han@intel.com>
-# R: Catharine West <catharine.west@intel.com> [catharine-intl]
-/MdeModulePkg/Core/Pei/**  @dandanbi @lgao4 debkumar.de@intel.com harry.han@intel.com @catharine-intl
-
 # MdeModulePkg: Reset modules
 # F: MdeModulePkg/*Reset*/
 # F: MdeModulePkg/Include/*Reset*.h
@@ -490,6 +482,16 @@
 # R: Ray Ni <ray.ni@intel.com> [niruiyu]
 /MdeModulePkg/**/*Reset*/          @ZhichaoGao  @niruiyu
 /MdeModulePkg/Include/*/*Reset*.h  @ZhichaoGao  @niruiyu
+
+# MdeModulePkg: Pei Core
+# F: MdeModulePkg/Core/Pei/
+# R: Dandan Bi <dandan.bi@intel.com> [dandanbi]
+# R: Liming Gao <gaoliming@byosoft.com.cn> [lgao4]
+# R: Debkumar De <debkumar.de@intel.com>
+# R: Harry Han <harry.han@intel.com>
+# R: Catharine West <catharine.west@intel.com> [catharine-intl]
+/MdeModulePkg/Core/Pei/**          @dandanbi @lgao4 debkumar.de@intel.com harry.han@intel.com @catharine-intl
+/MdeModulePkg/Core/Pei/*Reset*/**  @dandanbi @lgao4 debkumar.de@intel.com harry.han@intel.com @catharine-intl @ZhichaoGao @niruiyu
 
 # MdeModulePkg: Serial modules
 # F: MdeModulePkg/*Serial*/
@@ -505,7 +507,7 @@
 # R: Dandan Bi <dandan.bi@intel.com> [dandanbi]
 # R: Star Zeng <star.zeng@intel.com> [lzeng14]
 # R: Zhichao Gao <zhichao.gao@intel.com> [ZhichaoGao]
-/MdeModulePkg/Universal/Smbios*/**  @dandanbi  @lzeng14  @ZhichaoGao
+/MdeModulePkg/Universal/Smbios*/**  @LiuZhiguang001 @dandanbi  @lzeng14  @ZhichaoGao
 
 # MdeModulePkg: UEFI Variable modules
 # F: MdeModulePkg/*Var*/
@@ -527,7 +529,36 @@
 # F: MdeModulePkg/Include/UniversalPayload/
 # R: Zhiguang Liu <zhiguang.liu@intel.com> [LiuZhiguang001]
 # R: Ray Ni <ray.ni@intel.com> [niruiyu]
-/MdeModulePkg/Include/UniversalPayload/**  @LiuZhiguang001  @niruiyu
+/MdeModulePkg/Include/UniversalPayload/**              @LiuZhiguang001 @niruiyu
+/MdeModulePkg/Include/UniversalPayload/*SerialPort*.h  @LiuZhiguang001 @niruiyu @ZhichaoGao
+/MdeModulePkg/Include/UniversalPayload/*Acpi*.h        @LiuZhiguang001 @niruiyu @dandanbi @lgao4
+
+
+
+###
+### Extra rules
+###
+
+/MdeModulePkg/**/*BootManagerUi*/**                 @dandanbi @ydong10 @ZhichaoGao @niruiyu
+/MdeModulePkg/**/VarCheckHiiLib/**                  @hwu25 @lgao4 @dandanbi @ydong10
+/MdeModulePkg/Bus/**/*Serial*/**                    @niruiyu  @ZhichaoGao @hwu25
+/MdeModulePkg/**/*Smm*LockBox*/**                   @hwu25 @ydong10 @niruiyu
+/MdeModulePkg/**/*StatusCode*/Smm/**                @dandanbi @lgao4 @niruiyu @ydong10
+/MdeModulePkg/**/*Smm*StatusCode*/**                @dandanbi @lgao4 @niruiyu @ydong10
+/MdeModulePkg/**/*Smm*Perf*/**                      @dandanbi @lgao4 @niruiyu @ydong10
+/MdeModulePkg/**/*Perf*Smm*/**                      @LiuZhiguang001 @dandanbi @lgao4 @niruiyu @ydong10
+/MdeModulePkg/**/Acpi/*Smm*/**                      @LiuZhiguang001 @dandanbi @lgao4 @niruiyu @ydong10
+/MdeModulePkg/**/*Smm*Mem*/**                       @dandanbi @lgao4 @niruiyu @ydong10
+
+/MdeModulePkg/Include/*/*Smm*LockBox*.h             @hwu25 @ydong10 @niruiyu
+/MdeModulePkg/Include/*/*Smm*Mem*.h                 @dandanbi @lgao4 @niruiyu @ydong10
+/MdeModulePkg/Include/*/*Acpi*S3*.h                 @LiuZhiguang001 @dandanbi @hwu25 @lgao4 @ydong10
+/MdeModulePkg/Include/*/*S3*Smm*.h                  @hwu25 @niruiyu @ydong10
+/MdeModulePkg/Include/*/*Smm*FaultTolerantWrite*.h  @hwu25  @lgao4 @niruiyu @ydong10
+/MdeModulePkg/Include/*/*Smm*Var*.h                 @hwu25  @lgao4 @niruiyu @ydong10
+/MdeModulePkg/Include/*/*StatusCode*Var*.h          @dandanbi @hwu25  @lgao4
+/MdeModulePkg/Include/*/*BootScript*Var*.h          @hwu25 @lgao4 @ydong10
+
 
 # MdePkg
 # F: MdePkg/
