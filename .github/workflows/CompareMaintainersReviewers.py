@@ -28,20 +28,30 @@ def GetOwners(File):
           Reviewers.append('@' + Item.rsplit('[')[1].rsplit(']')[0])
         else:
           Reviewers.append(Item.rsplit('<')[1].rsplit('>')[0])
-    Maintainers = list(set(Maintainers))      
-    Reviewers = list(set(Reviewers))      
-    Maintainers.sort()    
+    Maintainers = list(set(Maintainers))
+    Reviewers = list(set(Reviewers))
+    Maintainers.sort()
     Reviewers.sort()
     return Maintainers, Reviewers
 
-owners    = CodeOwners(open('.github/CODEOWNERS').read())
-reviewers = CodeOwners(open('.github/REVIEWERS').read())
+try:
+    owners    = CodeOwners(open('.github/CODEOWNERS').read())
+except:
+    sys.exit(".github/CODEOWNERS invalid syntax")
+try:
+    reviewers = CodeOwners(open('.github/REVIEWERS').read())
+except:
+    sys.exit(".github/REVIEWERS invalid syntax")
 
+NoMaintainers = 0
 Mismatches = 0
 for File in Git('.').ls_files().split():
   Maintainers, Reviewers = GetOwners (File)
   CodeOwnersMaintainers = [x[1] for x in owners.of (File)]
   CodeOwnersMaintainers.sort()
+  if CodeOwnersMaintainers == [] and Maintainers == []:
+      print ('M:',File, 'CO:', CodeOwnersMaintainers, 'Maint:', Maintainers)
+      NoMaintainers = NoMaintainers + 1
   if CodeOwnersMaintainers != Maintainers:
       print ('M:',File, 'CO:', CodeOwnersMaintainers, 'Maint:', Maintainers)
       Mismatches = Mismatches + 1
@@ -51,7 +61,7 @@ for File in Git('.').ls_files().split():
       print ('R:',File, 'CO:', CodeOwnersReviewers, 'Maint:', Reviewers)
       Mismatches = Mismatches + 1
 
-if Mismatches > 0:
-    sys.exit("%d mismatches" % (Mismatches))
+if NoMaintainers > 0 or Mismatches > 0:
+    sys.exit("%d no maintainers.  %d mismatches" % (NoMaintainers, Mismatches))
 
-print ('No mismatches')
+print ('All files have a maintainer.  No mismatches')
